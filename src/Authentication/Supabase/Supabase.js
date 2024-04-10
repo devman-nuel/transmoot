@@ -9,10 +9,3 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 export default supabase;
 
 
-const useAuth = () => {
-    const user = supabase.auth.user(); // Accessing auth functionality through supabase.auth
-  
-    return { user }; // Return whatever authentication-related data you need
-  };
-  
-  export { useAuth };

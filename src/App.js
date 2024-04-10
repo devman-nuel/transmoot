@@ -1,35 +1,69 @@
-// App.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import React from "react";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet
+} from "react-router-dom";
+import ScrollTop from './Components/Scrolltop'
+import Navbar from './Components/Navbar/Navbar';
+import Footer from './Components/Footer/Footer';
+import Home from './Pages/Home/Home';
 import SignUp from './Pages/SignUp/SignUp';
 import LogIn from './Pages/LogIn/LogIn';
-import Home from './Pages/Home/Home';
 import LandingPage from './Pages/LandingPage/LandingPage';
-import PrivateRoute from './Components/PrivateRoute'; // Import the PrivateRoute component
-import { useAuth } from './Authentication/Supabase/Supabase'; // Import the useAuth hook
+import './App.css';
 
-const AppRoutes = () => {
-  const { user } = useAuth();
+const Layout = () =>{
 
-  
 
+  return(
+    <div className="main">
+      <ScrollTop />
+      <Navbar />
+      <Outlet/>
+      <Footer />
+    </div>
+  )
+}
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout/>,
+    children:[
+      {
+        path:"/",
+        element:<Home/>,
+      },
+
+      {
+        path:"/landingPage",
+        element:<LandingPage/>,
+      },
+
+      {
+        path:"/signUp",
+        element:<SignUp/>,
+      },
+
+      {
+        path:"/logIn",
+        element:<LogIn/>,
+      },
+
+     
+    ]
+  },
+
+])
+
+function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/signup" element={<SignUp />} />
-      <Route path="/signin" element={<LogIn />} />
-      <PrivateRoute path="/home" element={<Home />} isAuthenticated={user !== null} />
-      <Navigate to="/" />
-    </Routes>
+    <div className="App">
+      <RouterProvider router={router} />    
+    </div>
   );
 }
 
-const App = () => {
-  return (
-    <Router>
-      <AppRoutes />
-    </Router>
-  );
-};
-
 export default App;
+
