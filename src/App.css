@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;    
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family:'Aoenik-Bold';
+  src: url(./Fonts/Neue-montreal/AeonikTRIAL-Bold.otf);
+}
+
+@font-face {
+  font-family:'Aoenik-Regular';
+  src: url(./Fonts/Neue-montreal/AeonikTRIAL-Regular.otf);
+}
+
+@font-face {
+  font-family:'Aoenik-Light';
+  src: url(./Fonts/Neue-montreal/AeonikTRIAL-Light.otf);
+}
