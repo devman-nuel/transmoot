@@ -10,13 +10,7 @@ const LogIn = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  // Log Supabase URL and public key
-  console.log('Supabase URL:', process.env.REACT_APP_SUPABASE_URL);
-  console.log('Supabase Public Key:', process.env.REACT_APP_SUPABASE_PUBLIC_KEY);
-
-  console.log(supabase);
-
-  console.log(typeof supabase.auth.signIn === 'function'); 
+ 
 
   const handleLogIn = async () => {
     try {
