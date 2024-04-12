@@ -1,24 +1,9 @@
-import React, { useState } from 'react';
-import supabase from '../../Authentication/Supabase/Supabase';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './SignUp.css';
 
 const SignUp = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(false);
-
-  const handleSignUp = async () => {
-    const { error } = await supabase.auth.signUp({ email, password });
-    if (error) {
-      setError(error.message);
-      setSuccess(false);
-    } else {
-      setSuccess(true);
-      setError(null);
-    }
-  };
+ 
   
   return (
     <div className='sign-con'>
@@ -32,15 +17,12 @@ const SignUp = () => {
 
         <div className='login-box'>
           <label>Enter Email Address</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input type="email"  />
           <label>Enter Password</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-          <button onClick={handleSignUp}>Sign Up</button>
+          <input type="password"  />
+          <button >Sign Up</button>
 
           <p className='centered-text'>Already have an account? <Link to="/logIn" className='colored-sign'>Login</Link></p>
-
-          {error && <div className="error-popup">{error}</div>}
-          {success && <div className="success-popup">Sign up successful!</div>}
         </div>
       </div>
     </div>

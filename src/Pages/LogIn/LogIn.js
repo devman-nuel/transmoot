@@ -1,32 +1,9 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import supabase from '../../Authentication/Supabase/Supabase';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './LogIn.css';
 
 const LogIn = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(null);
-  const navigate = useNavigate();
 
- 
-
-  const handleLogIn = async () => {
-    try {
-      const { user, error } = await supabase.auth.signIn({ email, password });
-      if (error) {
-        setError(error.message);
-        
-      } else {
-        console.log('User signed in successfully:', user);
-        // Redirect to dashboard upon successful login
-        navigate('/dashboard');
-      }
-    } catch (error) {
-      setError(error.message);
-    }
-  };
 
   return (
     <div className='auth-con'>
@@ -40,14 +17,14 @@ const LogIn = () => {
 
         <div className='login-box'>
           <label>Enter Email Address</label>
-          <input type="email" placeholder='e.g: user@gmail.com' value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input type="email" placeholder='e.g: user@gmail.com'  />
           <label>Enter Password</label>
-          <input type="password" placeholder='Enter password here' value={password} onChange={(e) => setPassword(e.target.value)} />
-          <button onClick={handleLogIn}>Log In</button>
+          <input type="password" placeholder='Enter password here'  />
+          <button >Log In</button>
 
           <p className='centered-text'>Don’t have an account? <Link to="/signUp" className='colored-sign'>Create an account</Link></p>
 
-          {error && <div className="error-popup">{error}</div>}
+        
         </div>
       </div>
     </div>

@@ -1,22 +1,20 @@
-import React, { useState } from "react";
+import React  from "react";
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet,
-  useNavigate
+  Outlet
 } from "react-router-dom";
-import ScrollTop from './Components/Scrolltop';
+import ScrollTop from './Components/Scrolltop'
 import Navbar from './Components/Navbar/Navbar';
-import SignUp from './Pages/SignUp/SignUp';
-import LogIn from './Pages/LogIn/LogIn';
-import LandingPage from './Pages/LandingPage/LandingPage';
-import Dashboard from "./Pages/Dashboard/Dashboard";
 import './App.css';
-
-// Create a context for managing authentication state
-const AuthContext = React.createContext();
+import LandingPage from "./Pages/LandingPage/LandingPage";
+import LogIn from "./Pages/LogIn/LogIn";
+import SignUp from "./Pages/SignUp/SignUp";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 
 const Layout = () =>{
+
+
   return(
     <div className="main">
       <ScrollTop />
@@ -26,65 +24,47 @@ const Layout = () =>{
   )
 }
 
-const PrivateRoute = ({ element, ...rest }) => {
-  const { isAuthenticated } = React.useContext(AuthContext);
-  const navigate = useNavigate();
-
-  // Redirect to login if not authenticated
-  if (!isAuthenticated) {
-    navigate("/logIn");
-    return null;
-  }
-
-  return React.cloneElement(element, { ...rest });
-};
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <Layout/>,
     children:[
       {
-        path: "/",
-        element: <LandingPage />,
+        path:"/",
+        element:<LandingPage/>,
       },
+
       {
-        path: "/dashboard",
-        element: <PrivateRoute element={<Dashboard />} />,
+        path:"/",
+        element:<LandingPage/>,
       },
+
       {
-        path: "/signUp",
-        element: <SignUp />,
+        path:"/signUP",
+        element:<SignUp/>,
       },
+
       {
-        path: "/logIn",
-        element: <LogIn />,
+        path:"/login",
+        element:<LogIn/>,
       },
+
+      {
+        path:"/dashboard",
+        element:<Dashboard/>,
+      },    
     ]
   },
-]);
+
+])
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  // Define functions for handling authentication
-  const login = () => {
-    // Perform authentication logic
-    setIsAuthenticated(true);
-  };
-
-  const logout = () => {
-    // Perform logout logic
-    setIsAuthenticated(false);
-  };
-
   return (
     <div className="App">
-      <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
-        <RouterProvider router={router} />
-      </AuthContext.Provider>
+      <RouterProvider router={router} />    
     </div>
   );
 }
 
 export default App;
+
