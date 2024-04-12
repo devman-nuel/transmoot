@@ -1,10 +1,22 @@
-// PrivateRoute.js
-import React from 'react'
+import React, { useContext } from 'react';
+import { Route, Redirect } from 'react-router-dom';
+import { AuthContext } from './AuthContext'; // Assuming AuthContext is defined in a separate file
 
-function PrivateRoute() {
+function PrivateRoute({ component: Component, ...rest }) {
+  const { isAuthenticated } = useContext(AuthContext);
+
   return (
-    <div>PrivateRoute</div>
-  )
+    <Route
+      {...rest}
+      render={props =>
+        isAuthenticated ? (
+          <Component {...props} />
+        ) : (
+          <Redirect to="/login" />
+        )
+      }
+    />
+  );
 }
 
-export default PrivateRoute
+export default PrivateRoute;
