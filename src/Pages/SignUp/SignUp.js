@@ -20,7 +20,7 @@ const SignUp = () => {
           <input type="email"  />
           <label>Enter Password</label>
           <input type="password"  />
-          <button >Sign Up</button>
+          <Link className='auth-btn' to="/login" > <button >Sign Up</button></Link>
 
           <p className='centered-text'>Already have an account? <Link to="/logIn" className='colored-sign'>Login</Link></p>
         </div>

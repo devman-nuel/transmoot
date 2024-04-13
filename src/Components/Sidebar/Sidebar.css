@@ -1,0 +1,165 @@
+/* Sidebar.css */
+.sidebar {
+  position: relative;
+  left: 0;
+  top: 0;
+  bottom: 0; /* Added to make sure it covers the entire height */
+  width: 300px; /* Adjust according to your design */
+  height: 100vh;
+  background: #050505; 
+  padding:0 25px;/* Example background color */
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding-bottom: 25px;
+}
+
+/* width */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+  scroll-behavior: smooth;
+}
+
+/* Track */
+.sidebar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #050505; 
+  border-radius: 10px;
+  transition: all ease-in 0.3s;
+}
+ 
+/* Handle */
+.sidebar::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 15px;
+  background: #191919; 
+  border-radius: 10px;
+}
+
+
+.logo {
+  max-width: 200px;
+  padding: 12px 0;
+  background: #050505;
+  position: fixed;
+  z-index: 9;
+}
+
+.logo img{
+  width: 60%;
+  background: transparent;
+}
+
+.work{
+  background: transparent; 
+  margin-top: 80px;
+}
+
+.work p{
+  font-size: 12px;
+  background: transparent; 
+  font-family:'Aoenik-Regular';
+}
+
+.initial-box{
+  padding: 6px 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: 2px solid #101010;
+  border-radius: 10px;
+  color: #d1d1d1;
+  cursor: pointer;
+}
+
+.initial-con{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family:'Aoenik-Regular';
+  font-size: 14px;
+  background: transparent;
+}
+
+.initial{
+  width: 25px;
+  height: 25px;
+  border-radius: 8px;
+  background: #191919;
+}
+
+.menu{
+  margin-top: 50px;
+  background: transparent;
+  font-family:'Aoenik-Regular';
+}
+
+.menu p{
+  background: transparent;
+  font-size: 12px;
+  font-family:'Aoenik-Regular';
+}
+
+.menu-con{
+  width: 100%;
+  background: transparent;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-links{
+  display: block;
+  min-width: 128px;
+  background: transparent;
+  padding: 12px 10px;
+  border-radius: 10px;
+  transition: all ease-in 0.3s;
+  font-family:'Aoenik-Regular';
+  font-size: 14px;
+  color: #d1d1d1;
+}
+
+.menu-links:hover{
+  background: #191919;
+  color: #fff;
+}
+
+.icon{
+  margin-right: 15px;
+}
+
+.plan-upgrade{
+  margin-top: 50px;
+  background: #191919;
+  padding: 15px 10px;
+  border-radius: 12px;
+}
+
+.plan-upgrade p{
+  background: transparent;
+  text-align: center;
+  font-size: 14px;
+  font-family:'Aoenik-Regular';
+  line-height: 18px;
+  color: #d1d1d1;
+}
+
+.plan-upgrade button{
+  width: 100%;
+  background: #fff;
+  color: #262626;
+  font-family:'Aoenik-Bold';
+  margin-top: 20px;
+  padding: 10px 0;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .sidebar{
+    display: none;
+  }
+}

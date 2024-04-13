@@ -1,0 +1,8 @@
+/* Header.css */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #fff; /* Example background color */
+  z-index: 1000; /* Ensure it stays above other content */
+}

@@ -20,7 +20,8 @@ const LogIn = () => {
           <input type="email" placeholder='e.g: user@gmail.com'  />
           <label>Enter Password</label>
           <input type="password" placeholder='Enter password here'  />
-          <button >Log In</button>
+           <Link className='auth-btn' to="/dashboard" > <button >Log In</button></Link>
+         
 
           <p className='centered-text'>Don’t have an account? <Link to="/signUp" className='colored-sign'>Create an account</Link></p>
 
