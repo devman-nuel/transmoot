@@ -5,10 +5,16 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import { faHomeAlt} from '@fortawesome/free-solid-svg-icons';
+import { faImages} from '@fortawesome/free-solid-svg-icons';
+import { faPeopleGroup} from '@fortawesome/free-solid-svg-icons';
+import { faSort} from '@fortawesome/free-solid-svg-icons';
+import { faDatabase} from '@fortawesome/free-solid-svg-icons';
+import { faImagePortrait} from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
+    <div className="sidebar-con">
+       <div className='sidebar'>
        <div className='logo'>
          <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1712796881/Transmoot_Logo_aib80n.png' alt=''></img>
        </div>
@@ -30,22 +36,22 @@ const Sidebar = () => {
 
         <div className='menu-con'>
           <Link to={"./dashboard"} className='menu-links'>
-           <FontAwesomeIcon icon={faHomeAlt} className='icon'/>Dashboard             
+           <FontAwesomeIcon icon={faHomeAlt} className='icon'/> <p>Dashboard </p>          
           </Link>
           <Link to={"./dashboard"} className='menu-links'>
-           <FontAwesomeIcon icon={faHomeAlt} className='icon'/>Create            
+           <FontAwesomeIcon icon={faImages} className='icon'/> <p>Create</p>             
           </Link>
           <Link to={"./dashboard"} className='menu-links'>
-           <FontAwesomeIcon icon={faHomeAlt} className='icon'/>Teams            
+           <FontAwesomeIcon icon={faPeopleGroup} className='icon'/> <p>Teams </p>             
           </Link>
           <Link to={"./dashboard"} className='menu-links'>
-           <FontAwesomeIcon icon={faHomeAlt} className='icon'/>Manage            
+           <FontAwesomeIcon icon={ faSort} className='icon'/>  <p>Manage </p>            
           </Link>
           <Link to={"./dashboard"} className='menu-links'>
-           <FontAwesomeIcon icon={faHomeAlt} className='icon'/>Analytics             
+           <FontAwesomeIcon icon={faDatabase} className='icon'/> <p>Analytics</p>               
           </Link>
           <Link to={"./dashboard"} className='menu-links'>
-           <FontAwesomeIcon icon={faHomeAlt} className='icon'/>Media Library             
+           <FontAwesomeIcon icon={faImagePortrait} className='icon'/><p>Media Library</p>                
           </Link>
         </div>
        </div>
@@ -53,6 +59,7 @@ const Sidebar = () => {
        <div className='plan-upgrade'>
          <p>You are using a free account, upgrade your plan to unlock more features.</p>
          <button>Upgrade plan</button>
+       </div>
        </div>
     </div>
   );

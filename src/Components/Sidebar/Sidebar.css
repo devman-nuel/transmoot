@@ -1,12 +1,15 @@
 /* Sidebar.css */
+.sidebar-con{
+  background: #050505; 
+  width: 300px; 
+}
 .sidebar {
   position: relative;
   left: 0;
   top: 0;
-  bottom: 0; /* Added to make sure it covers the entire height */
-  width: 300px; /* Adjust according to your design */
+  bottom: 0; 
   height: 100vh;
-  background: #050505; 
+  background: transparent; 
   padding:0 25px;/* Example background color */
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -110,14 +113,15 @@
 }
 
 .menu-links{
-  display: block;
+  display: inline-flex;
+  align-items: center;
   min-width: 128px;
   background: transparent;
   padding: 12px 10px;
   border-radius: 10px;
   transition: all ease-in 0.3s;
   font-family:'Aoenik-Regular';
-  font-size: 14px;
+  font-size: 16px;
   color: #d1d1d1;
 }
 
@@ -126,14 +130,22 @@
   color: #fff;
 }
 
+.menu-links p{
+  font-family:'Aoenik-Regular';
+  font-size: 14px;
+}
+
 .icon{
+  width: 24px;
+  height: 18px;
   margin-right: 15px;
 }
+
 
 .plan-upgrade{
   margin-top: 50px;
   background: #191919;
-  padding: 15px 10px;
+  padding: 20px;
   border-radius: 12px;
 }
 
@@ -151,15 +163,20 @@
   background: #fff;
   color: #262626;
   font-family:'Aoenik-Bold';
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 10px 0;
   border-radius: 6px;
   border: none;
   cursor: pointer;
+  transition: all ease-in 0.3s;
+}
+
+.plan-upgrade button:hover{
+  background: #f1f1f1;
 }
 
 @media screen and (max-width: 900px) {
-  .sidebar{
+  .sidebar-con{
     display: none;
   }
 }
