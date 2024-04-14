@@ -11,7 +11,7 @@ const LandingPage = () => {
       </div>
 
       <div className='landingright'>
-        <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1712796881/Transmoot_Logo_aib80n.png' alt=''></img>
+        <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713129613/Transmoot_the_logo_o8au8z.png' alt=''></img>
         <p>Say hello to our powerful media tool powered by Transmoot API. You can now create visual experiences for personal use or business. </p>
 
         <div className='auth-details'>

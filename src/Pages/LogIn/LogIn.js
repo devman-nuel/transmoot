@@ -12,7 +12,7 @@ const LogIn = () => {
       </div>
 
       <div className='auth-right'>
-        <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1712796881/Transmoot_Logo_aib80n.png' alt='' />
+        <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713129613/Transmoot_the_logo_o8au8z.png' alt='' />
         <p>Log in to your account to continue </p>
 
         <div className='login-box'>

@@ -56,7 +56,7 @@ const Header = () => {
               {/* Your fixed component content goes here */}
               <div className='sidebar'>
        <div className='logo'>
-         <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1712796881/Transmoot_Logo_aib80n.png' alt=''></img>
+         <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713129613/Transmoot_the_logo_o8au8z.png' alt=''></img>
        </div>
 
        <div className='work'>
