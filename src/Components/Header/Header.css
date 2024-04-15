@@ -1,9 +1,8 @@
 /* Header.css */
 .header {
-  position: sticky;
   top: 0;
   width: 100%;
-  background: transparent;
+  background: #0C0C0C;
   z-index: 1000; /* Ensure it stays above other content */
   padding: 12px 30px;
   border-bottom: 2px solid #191919;
@@ -105,10 +104,9 @@
 
 @media screen and (max-width: 900px) {
   .header {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
-    background: transparent;
     z-index: 1000; /* Ensure it stays above other content */
     padding: 20px;
     border-bottom: none;

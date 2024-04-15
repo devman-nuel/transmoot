@@ -1,7 +1,18 @@
 /* Layout.css */
 .layout {
-    display: flex;
+    display: flex; 
+    height: 100vh;  
   }
+
+  
+@media screen and (max-width: 900px){
+  .layout {
+    display: flex; 
+    height: auto;  
+  }
+
+}
+  
   
   .page-content {
     width: 100%;

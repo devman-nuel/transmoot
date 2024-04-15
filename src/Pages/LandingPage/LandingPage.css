@@ -5,13 +5,135 @@
 }
 
 .landingleft{
-flex-basis: 50%;
+    padding: 40px 0;
+    flex-basis: 50%;
+    background: #191919;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
 }
 
-.landingleft img{
-    width: 100%;
+.team-img{
+    width: 60%;
+    margin: 0 auto;
+    background: #222222;
     height: 100%;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.team-wrap{
+    width: 150px;
+    height: 150px;
+    background: #2E2E2E;
+    border-radius: 50%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.team-wrap img{
+    width: 60%;
+    background: transparent;
+}
+
+.slide-con{
+    width: 80%;
+    margin: 0 auto;
+    background: #222222;
+    padding: 30px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.slider{
+    background: #222222;   
+}
+
+.slide-text{
+    background: #222222; 
+}
+
+.slide-con p{
+    font-size: 20px;
+    font-family:'Aoenik-Bold';
+    background: #222222;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.slide-con span{
+    font-family:'Aoenik-Regular';
+    background: #222222;
+    text-align: center;
+}
+
+.navigation{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    background: #222222;
+}
+
+.pagination{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #222222;
+}
+
+.slid{
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background: #2E2E2E;
+}
+
+.eclipse{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #191919;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+}
+
+.eclipse:hover{
+    background: #2E2E2E; 
+}
+
+.eclipse img{
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    transform: rotate(-90deg);
+
+}
+
+/* Add this to your CSS file */
+.slide.active {
+    display: block;
+    background: #222222;
+  }
+  
+  .slide {
+    display: none;
+    transition: all ease-in 0.3s;
+  }
+  
+  .slid.active {
+    background-color: #DBBDF6; /* Change to desired active color */
+  }
 
 .landingright{
     flex-basis: 50%;
