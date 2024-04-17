@@ -15,18 +15,22 @@
     height: 100vh;
 }
 
-.team-img{
+.team-img {
+    position: relative;
     width: 60%;
     margin: 0 auto;
     background: #222222;
-    height: 100%;
+    height: 300px; /* Adjust the height as needed */
     border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden; /* Ensure the rotating images stay within the team-img div */
 }
 
-.team-wrap{
+.team-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the team-wrap div is above rotating images */
     width: 150px;
     height: 150px;
     background: #2E2E2E;
@@ -37,10 +41,49 @@
     align-items: center;
 }
 
-
-.team-wrap img{
+.team-wrap img {
     width: 60%;
     background: transparent;
+}
+
+.orbit-one {
+    position: absolute;
+    width: 60px; 
+    height: 60px; 
+    background: #2E2E2E; /* Adjust the background color of the rotating images */
+    border-radius: 50%;
+    top: calc(50% - 70px); /* Adjust the distance from the top of the team-img div */
+    left: calc(50% + 100px);
+}
+
+.orbit-two {
+    position: absolute;
+    width: 60px; 
+    height: 60px; 
+    background: #2E2E2E; /* Adjust the background color of the rotating images */
+    border-radius: 50%;
+    top: calc(50% + 50px); /* Adjust the distance from the top of the team-img div */
+    left: calc(50% + 100px)
+}
+
+.orbit-three {
+    position: absolute;
+    width: 60px; 
+    height: 60px; 
+    background: #2E2E2E; /* Adjust the background color of the rotating images */
+    border-radius: 50%;
+    top: calc(50% + 20px); /* Adjust the distance from the top of the team-img div */
+    left: calc(50% - 170px);
+}
+
+.orbit-four {
+    position: absolute;
+    width: 60px; 
+    height: 60px; 
+    background: #2E2E2E; /* Adjust the background color of the rotating images */
+    border-radius: 50%;
+    top: calc(50% - 100px); /* Adjust the distance from the top of the team-img div */
+    left: calc(50% - 150px);
 }
 
 .slide-con{

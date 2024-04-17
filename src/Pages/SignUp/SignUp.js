@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
+
 import './SignUp.css';
 
 const SignUp = () => {
+ 
   const [activeSlide, setActiveSlide] = useState(0);
 
   // Function to handle click on pagination dots or eclipse
@@ -32,6 +34,10 @@ const SignUp = () => {
           <div className='team-wrap'>
             <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713166582/Group_2241_goz0w3.png' alt='' />
           </div>
+          <img className='orbit-one' src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713303142/Group_2037_cz6dbq.png' alt='' />       
+            <img className='orbit-two' src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713303142/Group_2039_aejeyp.png' alt='' />       
+            <img className='orbit-three' src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713304183/Group_2036_swy8lf.png' alt='' />          
+            <img className='orbit-four' src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713303142/Group_2038_xv9x5o.png' alt='' />  
         </div>
 
         <div className='slide-con'>
@@ -78,12 +84,22 @@ const SignUp = () => {
 
         <div className='login-box'>
           <label>Enter Email Address</label>
-          <input type="email"  />
+          <input
+            type="email"
+            placeholder='e.g: user@gmail.com'
+            
+            
+          />
           <label>Enter Password</label>
-          <input type="password"  />
-          <Link className='auth-btn' to="/login" > <button >Sign Up</button></Link>
+          <input
+            type="password"
+            placeholder='Enter password here'
+          
+          />
+           <button >Sign Up</button>
 
           <p className='centered-text'>Already have an account? <Link to="/logIn" className='colored-sign'>Login</Link></p>
+
         </div>
       </div>
     </div>

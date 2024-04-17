@@ -26,10 +26,15 @@ const LandingPage = () => {
   return (
     <div className='landingpage'>
       <div className='landingleft'>
-        <div className='team-img'>
-          <div className='team-wrap'>
-            <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713166582/Group_2241_goz0w3.png' alt='' />
-          </div>
+      <div className='team-img'>
+            <div className='team-wrap'>
+                <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713166582/Group_2241_goz0w3.png' alt='' />
+            </div>
+            
+            <img className='orbit-one' src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713303142/Group_2037_cz6dbq.png' alt='' />       
+            <img className='orbit-two' src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713303142/Group_2039_aejeyp.png' alt='' />       
+            <img className='orbit-three' src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713304183/Group_2036_swy8lf.png' alt='' />          
+            <img className='orbit-four' src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713303142/Group_2038_xv9x5o.png' alt='' />          
         </div>
 
         <div className='slide-con'>

@@ -209,6 +209,7 @@
 @media screen and (max-width: 900px){
     .dashboard{
       height: auto;
+      padding-top: 180px;
   }
 
     .overview{
