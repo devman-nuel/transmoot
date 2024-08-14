@@ -26,7 +26,7 @@ const LandingPage = () => {
   return (
     <div className='landingpage'>
       <div className='landingleft'>
-      <div className='team-img'>
+        <div className='team-img'>
             <div className='team-wrap'>
                 <img src='https://res.cloudinary.com/dxnukbo0u/image/upload/v1713166582/Group_2241_goz0w3.png' alt='' />
             </div>
