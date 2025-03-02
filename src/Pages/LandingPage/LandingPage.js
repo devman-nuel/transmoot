@@ -48,7 +48,7 @@ const LandingPage = () => {
                     {/* Add corresponding description texts here */}
                     {index === 0 && "Unleash your creative potential and bring your vision to life with Transmoot. Dive into a world of endless possibilities as you craft captivating visuals with ease and precision."}
                     {index === 1 && "Discover the power of Transmoot and unlock new dimensions of creativity. Explore innovative tools and features designed to elevate your projects to new heights."}
-                    {index === 2 && "Connect with a community of like-minded creators and collaborators. Share your work, exchange ideas, and forge meaningful connections that propel your creative journey forward."}
+                    {index === 2 && "Connect with a community of like-minded creators and collaborators. Share your work, exchange ideas, and forge meaningful connections that accelerate your creative journey forward."}
                     {index === 3 && "Achieve your goals and turn your dreams into reality with Transmoot. Whether you're a beginner or a seasoned pro, our platform empowers you to achieve success on your terms."}
                   </span>
                 </div>
